@@ -1,0 +1,32 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 9pt;
+}
+
+
+body {
+  --sb-track-color: #000;
+  --sb-thumb-color: #C0FF02;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  border: 1px solid #000000;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
